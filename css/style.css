@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    font-family: Raleway;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+body.dark-mode {
+    background-color: #343a40; 
+    color: white; 
+}
+
+.card.dark-mode {
+    background-color: #495057; /* Dark card background */
+    border-color: #6c757d; 
+    color: aliceblue;
+}
+
+.btn-dark-mode {
+    background-color: #007bff; 
+    color: white; 
+}
+
+.social-links.dark-mode {
+    color: aliceblue;
+}
+
+.search-btn {
+    background-color: #23231A;
+    color: aliceblue;
+}
+
+.search-btn:hover {
+    background-color: #23231A;
+    color: aliceblue;
+}
+
+.btn {
+    background-color: #23231A;
+    color: aliceblue;
+}
+
+.btn:hover {
+    background-color: #23231A;
+    color: aliceblue;
+}
+
+.weather-image-size {
+    margin-top: 35px;
+    width: 30%;    /* Set width to 50% of the parent element */
+    height: auto;  /* Maintain aspect ratio */
+}

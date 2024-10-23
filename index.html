@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Weather Application by Aeron Justine Cruz</title>
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+        <div class="card">
+            <div class="card-body"><br>
+                <!-- <button id="theme-toggle" class="btn btn-secondary mb-3"> Dark Mode</button> -->
+                <h1 class="card-title text-center">Weather Monitoring Web Application</h1><br>
+                <p class="card-text">This web application aims to identify the real-time weather temperature, humidity, wind speed of a specific area, city, or country around the world.</p>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search the City Name and Country" aria-label="Search the City Name" aria-describedby="search-button">
+                    <button class="search-btn" type="button" id="search-button"><i class="bi bi-search"></i> Search</button>                    
+                    <div class="invalid-feedback" id="error-message" style="display: none;">
+                        <br><h6>Please enter a valid city name.</h6>
+                    </div>
+                </div><br>
+        
+                <div class="row">
+                    <div class="col-md-6 d-flex flex-column align-items-center justify-content-center text-center">
+                        <h1><i class="bi bi-geo-alt-fill"></i> <span class="location">No City entered</span> </h1>
+                        <div class="row">
+                            <div class="col-md-12 d-flex align-items-center justify-content-center">
+                                <h1 style="font-size: 60px;"><span class="temperature">--</span> °C</h1>
+                            </div>
+                        </div>
+                        <br><br>
+                        <h4><i class="bi bi-thermometer"></i> Temperature (Max): <span class="temperature-max">--</span> °C</h4><br>
+                        <h4><i class="bi bi-thermometer"></i> Temperature (Min): <span class="temperature-min">--</span> °C</h4><br>
+                        <h4><i class="bi bi-droplet-fill"></i> Humidity: <span class="humidity">--</span> %</h4><br>
+                        <h4><i class="bi bi-wind"></i> Wind Speed: <span class="wind-speed">--</span> m/s</h4><br>
+                        <h4><i class="bi bi-water"></i> Sea Level: <span class="sea-level">--</span> hPa</h4><br>
+                    </div>
+
+                    <br><br>
+                    <div class="col-lg-6 col-md-12">
+                        <h5 class="card-title text-end" id="date-time"></h5>
+                        <h2><i class="bi bi-globe-asia-australia"></i> Forecast Result:  <span id="date-time "></span></h2>
+                        <div class="weather-map">
+                            <iframe id="map-frame" style="width: 100%; height: 500px;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <p><i class="bi bi-laptop" style="font-size: 1.4rem;"></i> Developed by Engr. Aeron Justine M. Cruz <br></p>
+        <a class="btn btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+            <i class="bi bi-person"></i> About the Developer
+        </a>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header mt-2">
+              <h4 class="offcanvas-title" id="offcanvasExampleLabel">About the Developer</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              
+                <img src="images/aeron.jpg" alt="Developer Image" class="img-fluid-centered mb-3" style="max-width: 100%; height: auto;"><br>
+
+                Hi! I'm <strong>Engr. Aeron Justine M. Cruz, </strong>a Computer Engineer, I'm a beginner in software development and I'm an aspiring software engineer. <br><br>
+                This weather application is built as part of my practice in web development wherein I used languages such as HTML, CSS, Javascript and Bootstrap framework. Also, I used the OpenWeatherMap API Key to fetch the weather information from its original information source. <br><br>
+                I hope you like this web application built by mine and I will do my best to practice and built more software applications. 
+            </div>
+        </div>
+        
+        <br><br>
+        <div class="social-links">
+        <a href="https://facebook.com" target="_blank" class="text-dark me-3 d-inline"><i class="bi bi-facebook" style="font-size: 1.3rem;"></i></a>
+        <a href="https://twitter.com" target="_blank" class="text-dark me-3 d-inline"><i class="bi bi-twitter" style="font-size: 1.4rem;"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="text-dark me-3 d-inline"><i class="bi bi-linkedin" style="font-size: 1.3rem;"></i></a>
+        <a href="https://github.com" target="_blank" class="text-dark d-inline"><i class="bi bi-github" style="font-size: 1.35rem;"></i></a>
+        </div>
+        
+    </div>
+    
+</body>
+<script src="js/weather.js"></script>
+<script src="js/datetime.js"></script>
+<script src="js/darklight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
